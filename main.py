@@ -1,5 +1,5 @@
 from autogen_agentchat.teams import RoundRobinGroupChat
-from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.agents import AssistantAgent, UserProxyAgent
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 from autogen_agentchat.conditions import MaxMessageTermination, TextMentionTermination
 from autogen_agentchat.ui import Console
@@ -8,7 +8,7 @@ import asyncio
 
 dotenv.load_dotenv()
 
-model = OpenAIChatCompletionClient(model="gpt-4o-mini")
+model = OpenAIChatCompletionClient(model="gpt-4.1-nano")
 
 clarity_agent = AssistantAgent(
     "ClarityAgent",
